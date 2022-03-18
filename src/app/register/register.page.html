@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <ion-text color="primary">
+      <p>Please fill up enquiry and we will be in touch with you soon</p>
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password"  [(ngModel)]= "user.password"required></ion-input>
+    </ion-item>
+
+    <ion-button 
+  class="ion-padding" 
+  expand="full" 
+  shape="round" 
+  color="primary" 
+  (click)="register(user)">
+   SUBMIT
+  </ion-button>
+
+ 
+  </div>
+</ion-content>

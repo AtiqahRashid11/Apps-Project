@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="kuptm" class="ion-text-center"> 
+    <ion-back-button></ion-back-button>
+    <ion-title>Edit Profile</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<div class="ion-padding">
+<ion-text color="danger">
+  <p>Update information</p>
+</ion-text>
+
+<ion-item>
+  <ion-label position="floating">Name</ion-label>
+  <ion-input type="text"  [(ngModel)]="post.name" required></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">E-Mail</ion-label>
+  <ion-input type="email" [(ngModel)]="post.email" placeholder="your@gmail.com" required></ion-input>
+</ion-item>
+
+<ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-textarea [(ngModel)]="post.Address" placeholder="type your address"></ion-textarea>
+    </ion-item>
+  <ion-item>
+
+
+    <ion-label>eventType</ion-label>
+    
+    <ion-select [(ngModel)]="post.eventType" value="General" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="Married">Married</ion-select-option>
+      <ion-select-option value="Dinner">Dinner</ion-select-option>
+      <ion-select-option value="Graduation">Graduation </ion-select-option>
+    </ion-select>
+    </ion-item>
+
+
+<ion-item>
+  <ion-label position="floating">Date</ion-label>
+  <ion-input type="Date" [(ngModel)]="post.date" placeholder="insert yor choosen  date" required></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Time</ion-label>
+  <ion-input type="Time" [(ngModel)]="post.time" placeholder="inser your choosen time" required></ion-input>
+</ion-item>
+
+   <ion-item>
+     <ion-label position="floating">Message</ion-label>
+     <ion-textarea [(ngModel)]="post.message" placeholder="type your message"></ion-textarea>
+   </ion-item> 
+    
+   <ion-button expand="block" color="kuptm" (click)="updatePost(post)">
+     <ion-icon slot="start" name="send"></ion-icon>
+    Update
+   </ion-button>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="ion-text-center" color="kuptm">
+    <ion-title>Copyright</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+

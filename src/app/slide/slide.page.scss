@@ -1,0 +1,33 @@
+ion-content{
+    img.logo{
+      position: absolute;
+      z-index: 11;
+      height: 80px;
+      width: auto;
+      left: 0;
+      right: 0;
+      top: 30px;
+      bottom: 0;
+      margin: 0 auto;
+    }
+  
+    ion-slides{
+      img{
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  
+  
+  ion-button{
+    position: absolute;
+    color: #000;
+    z-index: 111;
+    width: 6rem;
+    bottom: 3rem;
+    --boarder-radius: 16px;
+    font-size: 19px;
+    right: 8vw;
+    --background: #fe28da;
+  }
+  }
